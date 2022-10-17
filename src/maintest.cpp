@@ -3,6 +3,9 @@
 #include <OcrLiteCApi.h>
 #include <stdexcept>
 #include <cstdlib>
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 void Logger(const char *format, ...) {
     char *buffer = (char *) malloc(8192);
@@ -15,6 +18,9 @@ void Logger(const char *format, ...) {
 }
 
 int main(int argc, char *argv[]) {
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+#endif
     OCR_HANDLE handle = OcrInit(DET_MODEL, CLS_MODEL, REC_MODEL, KEY_FILE, THREAD_NUM);
     if (!handle) {
         printf("cannot initialize the OCR Engine.\n");
