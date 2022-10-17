@@ -5,7 +5,15 @@ cls
 echo ========请先参考OCR项目相关说明准备好编译环境========
 echo.
 
+echo "========编译选项========"
+echo "请注意：项目默认使用Release库，除非您自行编译Debug版的OcrLib(含引用库)，否则请不要选择Debug编译"
+echo "请输入编译选项并回车: 1)Release, 2)Debug"
 set BUILD_TYPE=Release
+set /p flag=
+if %flag% == 1 (set BUILD_TYPE=Release)^
+else if %flag% == 2 (set BUILD_TYPE=Debug)^
+else (echo 输入错误！Input Error!)
+echo.
 
 echo VS版本: 1)vs2019-x64, 2)vs2019-x86
 set BUILD_CMAKE_T="v142"
