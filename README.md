@@ -20,21 +20,21 @@
 
 ```
 OcrLib
-├── Darwin-CLIB
+├── Darwin-CLIB-CPU
 │ ├── OcrLibConfig.cmake
 │ ├── include
 │ └── lib
-├── Linux-CLIB
+├── Linux-CLIB-CPU
 │ ├── OcrLibConfig.cmake
 │ ├── include
 │ └── lib
 ├── OcrLibWrapper.cmake
-├── win-CLIB-Win32
+├── win-CLIB-CPU-Win32
 │ ├── OcrLibConfig.cmake
 │ ├── bin
 │ ├── include
 │ └── lib
-└── win-CLIB-x64
+└── win-CLIB-CPU-x64
     ├── OcrLibConfig.cmake
     ├── bin
     ├── include
